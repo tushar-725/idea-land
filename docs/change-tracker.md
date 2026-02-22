@@ -4,6 +4,18 @@ title: Change Tracker - Product Specification
 ---
 
 <style>
+  .page-content .wrapper {
+    max-width: 1400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 640px) {
+    .page-content .wrapper {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
   .spec-layout {
     display: grid;
     grid-template-columns: 260px minmax(0, 1fr);
@@ -554,3 +566,4 @@ Avoid clutter and highlight progress.
 > The simplest and most effective way to track real-life change.
   </div>
 </div>
+
