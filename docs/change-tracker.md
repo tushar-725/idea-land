@@ -1,124 +1,231 @@
-# Change Tracker – Product Specification
+---
+layout: default
+title: Change Tracker - Product Specification
+---
+
+<style>
+  .spec-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .spec-sidebar {
+    position: sticky;
+    top: 1.25rem;
+    padding: 14px 16px;
+    border: 1px solid #d8dee4;
+    border-radius: 12px;
+    background: linear-gradient(160deg, #f8fbff 0%, #f2f7f4 100%);
+  }
+
+  .spec-sidebar h3 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+  }
+
+  .spec-sidebar ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .spec-sidebar li {
+    margin: 6px 0;
+  }
+
+  .spec-sidebar a {
+    text-decoration: none;
+  }
+
+  .spec-sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  .spec-main {
+    padding: 4px 2px;
+  }
+
+  .spec-main h1 {
+    margin-top: 0;
+    line-height: 1.2;
+  }
+
+  .spec-main blockquote {
+    margin-left: 0;
+    padding: 8px 14px;
+    border-left: 4px solid #2f7d4d;
+    background: #f4fbf6;
+  }
+
+  .spec-main table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .spec-main th,
+  .spec-main td {
+    border: 1px solid #d0d7de;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .spec-main th {
+    background: #f6f8fa;
+  }
+
+  .spec-badge {
+    display: inline-block;
+    margin: 8px 0 14px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #e8f4ec;
+    color: #1f6f43;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 960px) {
+    .spec-layout {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .spec-sidebar {
+      position: static;
+    }
+
+    .spec-sidebar ul {
+      columns: 2;
+      column-gap: 18px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .spec-sidebar ul {
+      columns: 1;
+    }
+  }
+</style>
+
+<div class="spec-layout">
+  <aside class="spec-sidebar">
+    <h3>Quick Navigation</h3>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#problem-statement">Problem Statement</a></li>
+      <li><a href="#what-the-app-does">What The App Does</a></li>
+      <li><a href="#core-concepts">Core Concepts</a></li>
+      <li><a href="#key-features">Key Features</a></li>
+      <li><a href="#target-users">Target Users</a></li>
+      <li><a href="#competitor-analysis">Competitor Analysis</a></li>
+      <li><a href="#where-our-app-stands">Market Position</a></li>
+      <li><a href="#strengths-of-our-idea">Strengths</a></li>
+      <li><a href="#gaps-in-existing-apps">Gaps</a></li>
+      <li><a href="#unique-selling-points-usp">USP</a></li>
+      <li><a href="#mvp-definition">MVP Definition</a></li>
+      <li><a href="#how-we-can-build-it">Architecture</a></li>
+      <li><a href="#future-features">Future Features</a></li>
+      <li><a href="#design-principles">Design Principles</a></li>
+      <li><a href="#vision">Vision</a></li>
+    </ul>
+  </aside>
+
+  <div class="spec-main" markdown="1">
+# Change Tracker - Product Specification
+
+<span class="spec-badge">Product Draft v1</span>
 
 ## Overview
 
-**Change Tracker** is a mobile application designed to help users **track real-life progress and changes visually over time.**
+**Change Tracker** is a mobile app that helps people **see real-life progress over time** through photos, notes, goals, and streaks.
 
-The app allows users to document transformations such as:
+The app is designed for journeys such as:
 
 - Hair growth
-- Fitness progress
+- Fitness transformation
 - Plant growth
 - Reading progress
 - Habits
 - Personal projects
 
-Unlike traditional habit trackers or photo journals, Change Tracker focuses on:
+Unlike typical habit trackers or photo journals, the focus is:
 
-> **Visual and measurable change over time**
+> Visual and measurable change over time.
 
-**Core Idea**
-
-The simplest way to track real-life change.
+**Core idea:** the simplest way to track real-life change.
 
 ---
 
-# Problem Statement
+## Problem Statement
 
-Many people attempt to improve areas of their lives:
-
-- Health
-- Fitness
-- Appearance
-- Skills
-- Habits
-
-However, users struggle to:
+People try to improve different areas of life, but usually struggle to:
 
 - Measure progress
 - Stay motivated
-- Maintain consistency
-- See long-term improvement
+- Remain consistent
+- See long-term results
 
 Existing tools are fragmented:
 
 | Tool Type | Problem |
-|---------|---------|
-| Photo Apps | Store images but don't track progress |
-| Habit Apps | Track streaks but no visual progress |
-| Journals | Store notes but no measurable change |
+| --- | --- |
+| Photo Apps | Store images but do not track progress clearly |
+| Habit Apps | Track streaks but do not show visual change |
+| Journals | Store notes but do not quantify outcomes |
 
-There is no unified system for tracking **real-world change.**
+There is no unified and simple system for tracking real-world change.
 
 ---
 
-# What The App Does
+## What The App Does
 
-The application allows users to create **Journeys**.
-
-A **Journey** represents a specific type of progress.
-
-Examples:
+Users create **Journeys** for a specific type of progress.
 
 ### Hair Growth Journey
 
-User can:
-
 - Take photos regularly
-- Track hair growth
+- Track growth over time
 - Add notes
-- Compare Day 1 vs Today
-
----
+- Compare day 1 vs today
 
 ### Fitness Journey
 
-User can:
-
-- Take body photos
+- Capture body photos
 - Track transformation
 - Maintain streaks
-- Monitor long-term progress
-
----
+- Monitor long-term consistency
 
 ### Plant Growth Journey
 
-User can:
-
-- Capture plant growth
-- Track development
-- See evolution over time
-
----
+- Capture growth stages
+- Track development timeline
+- See evolution clearly
 
 ### Reading Journey
 
-User can:
-
-- Upload reading progress
+- Log reading sessions
 - Track books completed
-- Maintain streaks
-
----
+- Maintain consistency streaks
 
 ### Personal Collections
 
-Users can maintain structured collections such as:
+Users can track structured collections such as:
 
 - Cooking experiments
 - DIY projects
 - Artwork
 
-This is **structured storage**, not general photo backup.
+This is structured progress tracking, not generic photo backup.
 
 ---
 
-# Core Concepts
+## Core Concepts
 
-## Journeys
+### Journeys
 
-Journeys are the primary unit of the application.
+A Journey is the primary tracking unit.
 
 Examples:
 
@@ -135,160 +242,112 @@ Each Journey contains:
 - Goals
 - Streaks
 
----
-
-## Entries
+### Entries
 
 Each Journey contains Entries.
 
 An Entry includes:
 
 - Photo
-- Note (optional)
+- Optional note
 - Date
 
 Example:
-Date: March 10
 
-Photo: Hair Image
-Note: Reduced hair fall this week
+- Date: March 10
+- Photo: Hair image
+- Note: Reduced hair fall this week
 
----
+### Goals
 
-## Goals
-
-Users can define goals.
+Users can define outcome-focused goals.
 
 Examples:
 
 - Read 10 books this year
-- Upload daily gym progress
+- Upload gym progress daily
 - Track hair growth for 6 months
 
----
+### Streaks
 
-## Streaks
-
-Users maintain streaks by updating Journeys regularly.
+Streaks reward consistency.
 
 Examples:
 
-- 15 day reading streak
-- 30 day fitness streak
-
-Streaks increase engagement.
+- 15-day reading streak
+- 30-day fitness streak
 
 ---
 
-# Key Features
+## Key Features
 
-## Visual Timeline
+### Visual Timeline
 
-Each Journey displays a visual timeline:
-Day 1 → Day 30 → Day 90 → Day 180
+Each Journey shows visual milestones:
 
+Day 1 -> Day 30 -> Day 90 -> Day 180
 
-Users can scroll through progress easily.
-
----
-
-## Before vs After Comparison
+### Before vs After Comparison
 
 Users can compare:
 
 - First entry vs latest entry
-- Any two entries
+- Any two custom entries
 
-This makes progress visible.
+### Auto Timelapse
 
----
+The app generates transformation videos from journey photos.
 
-## Auto Timelapse
+Example: 60 photos -> one progress video.
 
-The app automatically generates videos from photos.
+### Smart Reminders
 
-Example:
+Context-aware reminders replace generic notifications.
 
-60 photos → transformation video
+Example: "You have not updated your Hair Journey in 6 days."
 
-Highly motivating feature.
+### Streak Motivation
 
----
+Examples:
 
-## Smart Reminders
+- "Great job. 7-day streak."
+- "Only 2 books left this year."
 
-Instead of generic reminders:
+### Guided Photo Mode
 
-Example:
+Photo consistency features:
 
-"You haven't updated your Hair Journey in 6 days."
-
----
-
-## Streak Motivation
-
-Example notifications:
-
-- "Great job! 7 day streak"
-- "Only 2 books left this year"
-
----
-
-## Guided Photo Mode
-
-The app helps users capture consistent photos.
-
-Features:
-
-- Overlay previous photo
+- Previous-photo overlay
 - Alignment guides
-- Same angle capture
+- Same-angle capture
 
-This improves comparison accuracy.
-
-This is a **major differentiator.**
+This improves comparison accuracy and acts as a key differentiator.
 
 ---
 
-# Target Users
+## Target Users
 
-## Primary Users
+### Primary Users
 
-### Fitness Users
+#### Fitness Users
 
-Users tracking:
+- Weight loss tracking
+- Muscle gain tracking
+- Body transformation tracking
 
-- Weight loss
-- Muscle gain
-- Body transformation
+#### Hair and Skin Treatment Users
 
-Highly engaged users.
+Users undergoing treatment who need visual proof of outcomes.
 
----
+### Secondary Users
 
-### Hair & Skin Treatment Users
-
-Users undergoing treatment want proof of results.
-
-Very strong use case.
-
----
-
-## Secondary Users
-
-### Self Improvement Users
-
-Users tracking:
+#### Self-Improvement Users
 
 - Reading
 - Skills
 - Habits
 
----
-
-### Hobby Users
-
-Users tracking:
+#### Hobby Users
 
 - Plants
 - Cooking
@@ -296,330 +355,202 @@ Users tracking:
 
 ---
 
-# Competitor Analysis
+## Competitor Analysis
 
-## Photo Progress Apps
+### Photo Progress Apps
 
-Examples:
+Examples: SnapProgress, Metamorph, PhotoProgress
 
-- SnapProgress
-- Metamorph
-- PhotoProgress
-
-### Strengths
+Strengths:
 
 - Visual comparison
-- Simple concept
+- Simple workflow
 
-### Weaknesses
+Weaknesses:
 
-- Fitness-only
+- Fitness-only focus
 - Poor organization
-- No goals
-- No streaks
+- Limited goals and streak support
 
----
+### Habit Tracker Apps
 
-## Habit Tracker Apps
+Examples: Habitica, Loop Habit Tracker, HabitBull
 
-Examples:
-
-- Habitica
-- Loop Habit Tracker
-- HabitBull
-
-### Strengths
+Strengths:
 
 - Streak tracking
-- Reminders
+- Reminder systems
 
-### Weaknesses
+Weaknesses:
 
-- No visual progress
+- No visual progress layer
 - Feels like task management
 
----
+### Photo Journal Apps
 
-## Photo Journal Apps
+Strengths:
 
-Examples:
+- Quick daily logging
 
-- Daily Photo Journal Apps
-
-### Strengths
-
-- Simple logging
-
-### Weaknesses
+Weaknesses:
 
 - No goals
-- No tracking structure
+- No structured tracking model
 
 ---
 
-# Where Our App Stands
+## Where Our App Stands
 
 | Feature | Photo Apps | Habit Apps | Change Tracker |
-|--------|------------|------------|---------------|
+| --- | --- | --- | --- |
 | Photo Tracking | Yes | No | Yes |
 | Goals | Limited | Yes | Yes |
 | Streaks | No | Yes | Yes |
 | Timeline | Limited | No | Yes |
-| Generic Use | No | Yes | Yes |
+| Generic Use Cases | No | Yes | Yes |
 
 ---
 
-# Strengths of Our Idea
+## Strengths of Our Idea
 
-## Broad Use Cases
+### Broad Use Cases
 
-Works for:
+Works across fitness, hair, plants, reading, and projects.
 
-- Fitness
-- Hair
-- Plants
-- Reading
-- Projects
+### Emotional Motivation
 
----
+Users can see real improvement, which is psychologically strong.
 
-## Emotional Motivation
+### Daily Engagement
 
-Users see real progress.
+Streaks and goals encourage frequent app usage.
 
-This is psychologically powerful.
+### Simple Concept
+
+Clear value proposition: track change over time.
 
 ---
 
-## Daily Engagement
+## Gaps in Existing Apps
 
-Streaks and goals encourage daily use.
+### Generic Progress Tracking
 
----
+Most products are single-purpose; this app is multi-purpose.
 
-## Simple Concept
+### Photo Consistency
 
-Easy to understand:
+Few apps help users take consistent comparison photos.
 
-Track change over time.
+### Motivation Systems
 
----
-
-# Gaps in Existing Apps
-
-## Generic Progress Tracking
-
-Most apps are single-purpose.
-
-Our app is flexible.
-
----
-
-## Photo Consistency
-
-Few apps help users capture consistent photos.
-
-Guided photo mode solves this.
-
----
-
-## Motivation Systems
-
-Most apps lack emotional feedback.
-
-We provide:
+Most apps lack emotional feedback loops; this product includes:
 
 - Streak feedback
-- Goal feedback
-- Progress reminders
+- Goal progress feedback
+- Smart reminders
 
 ---
 
-# Unique Selling Points (USP)
+## Unique Selling Points (USP)
 
-## USP 1
-
-Generic visual progress tracking.
-
-Track any change.
-
----
-
-## USP 2
-
-Guided photo capture.
-
-Accurate comparisons.
+1. Generic visual progress tracking for multiple domains.
+2. Guided photo capture for accurate comparisons.
+3. Auto-generated progress videos.
+4. Minimal-friction workflow: Open -> Capture -> Save.
 
 ---
 
-## USP 3
+## MVP Definition
 
-Auto-generated progress videos.
+Version 1 should include only essential capabilities.
 
----
+### Core MVP Features
 
-## USP 4
+- Journey creation
+- Entry creation (photo + note)
+- Timeline view
+- Streak counter
+- Reminder system
 
-Minimal friction usage.
+### Optional MVP Feature
 
-Open → Capture → Save.
-
----
-
-# MVP Definition
-
-Version 1 should include only essential features.
+- Before/After comparison mode
 
 ---
 
-## Core Features
+## How We Can Build It
 
-### Journey Creation
-
-User creates journeys.
-
-Example:
-
-Hair Journey
-
----
-
-### Entry Creation
-
-User can:
-
-- Add photo
-- Add note
-
----
-
-### Timeline
-
-Scrollable history.
-
----
-
-### Streak Counter
-
-Track consistency.
-
----
-
-### Reminders
-
-Update reminders.
-
----
-
-## Optional MVP Features
-
-### Before/After Comparison
-
-Compare two photos.
-
----
-
-# How We Can Build It
-
-## Mobile Framework
+### Mobile Framework
 
 Recommended:
 
-**React Native**
-
-or
-
-**Flutter**
+- React Native, or
+- Flutter
 
 Reasons:
 
-- Fast development
-- Cross platform support
+- Faster development
+- Cross-platform support
 
----
+### Backend
 
-## Backend
+Recommended: Firebase or Supabase
 
-Recommended:
-
-Firebase or Supabase
-
-Required features:
+Required services:
 
 - Authentication
 - Database
 - Storage
 - Notifications
 
----
+### Storage
 
-## Storage
+Cloud object storage for user photos (for example, Firebase Storage).
 
-Photos stored in cloud storage.
+### Architecture
 
-Example:
-
-Firebase Storage.
+Mobile App -> Backend -> Storage
 
 ---
 
-## Architecture
+## Future Features
 
-Simple architecture:
-Mobile App → Backend → Storage
+### AI Progress Detection
 
+Examples:
 
----
+- Hair density trend detection
+- Plant growth estimation
+- Body transformation metrics
 
-# Future Features
+### Smart Insights
 
-## AI Progress Detection
+Example: "You improved 15% in 60 days."
 
-Example:
+### Advanced Comparisons
 
-- Hair density increase
-- Plant height detection
-- Body transformation estimates
-
----
-
-## Smart Insights
-
-Example:
-
-"You improved 15% in 60 days."
+Automatic best-pair comparison selection.
 
 ---
 
-## Advanced Comparisons
+## Design Principles
 
-Automatic best comparison detection.
+### Extreme Simplicity
 
----
+Keep the interface clean and focused.
 
-# Design Principles
+### Fast Entry Creation
 
-## Extreme Simplicity
+Target: less than 10 seconds per update.
 
-Minimal interface.
+### Clean UI
 
----
-
-## Fast Entry Creation
-
-Less than 10 seconds.
+Avoid clutter and highlight progress.
 
 ---
 
-## Clean UI
-
-No clutter.
-
----
-
-# Vision
-
-The goal is to build:
+## Vision
 
 > The simplest and most effective way to track real-life change.
+  </div>
+</div>
