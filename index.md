@@ -1,6 +1,6 @@
 # Product Ideas & Specifications
 
-This repository contains product ideas, technical planning and design documents.
+This repository contains product ideas, technical planning, and design documents.
 
 ---
 
@@ -9,9 +9,10 @@ This repository contains product ideas, technical planning and design documents.
 ### Change Tracker App
 A mobile application to track real-life progress visually and through goals.
 
-Read full document:
+Read full documents:
 
-➡️ [Change Tracker Specification](docs/change-tracker.md)
+- [Change Tracker Specification](docs/change-tracker.md)
+- [Phase 1 Features](docs/phase1-features.md)
 
 ---
 
