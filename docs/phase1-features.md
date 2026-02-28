@@ -1,128 +1,12 @@
 ---
-layout: default
+layout: idea-doc
 title: Phase 1 Features - Transformation Tracker
+doc_id: phase1-features
 ---
 
-<style>
-  .page-content .wrapper {
-    max-width: 1400px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media (max-width: 640px) {
-    .page-content .wrapper {
-      padding-left: 14px;
-      padding-right: 14px;
-    }
-  }
-
-  .spec-layout {
-    display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 28px;
-    align-items: start;
-  }
-
-  .spec-sidebar {
-    position: sticky;
-    top: 1.25rem;
-    padding: 14px 16px;
-    border: 1px solid #d8dee4;
-    border-radius: 12px;
-    background: linear-gradient(160deg, #fffaf4 0%, #f4f8ff 100%);
-  }
-
-  .spec-sidebar h3 {
-    margin: 0 0 10px;
-    font-size: 0.95rem;
-    letter-spacing: 0.01em;
-  }
-
-  .spec-sidebar ul {
-    margin: 0;
-    padding-left: 18px;
-  }
-
-  .spec-sidebar li {
-    margin: 6px 0;
-  }
-
-  .spec-sidebar a {
-    text-decoration: none;
-  }
-
-  .spec-sidebar a:hover {
-    text-decoration: underline;
-  }
-
-  .spec-main {
-    padding: 4px 2px;
-  }
-
-  .spec-main h1 {
-    margin-top: 0;
-    line-height: 1.2;
-  }
-
-  .spec-main blockquote {
-    margin-left: 0;
-    padding: 8px 14px;
-    border-left: 4px solid #c25d00;
-    background: #fff7ed;
-  }
-
-  .spec-badge {
-    display: inline-block;
-    margin: 8px 0 14px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #fff1e1;
-    color: #8a4700;
-    font-size: 0.82rem;
-    font-weight: 600;
-  }
-
-  @media (max-width: 960px) {
-    .spec-layout {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .spec-sidebar {
-      position: static;
-    }
-
-    .spec-sidebar ul {
-      columns: 2;
-      column-gap: 18px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .spec-sidebar ul {
-      columns: 1;
-    }
-  }
-</style>
-
-<div class="spec-layout">
-  <aside class="spec-sidebar">
-    <h3>Quick Navigation</h3>
-    <ul>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#transformation-categories">Transformation Categories</a></li>
-      <li><a href="#core-features-non-ai">Core Features</a></li>
-      <li><a href="#phase-1-ai-features">Phase 1 AI Features</a></li>
-      <li><a href="#phase-1-excluded-features">Excluded Features</a></li>
-      <li><a href="#phase-1-success-criteria">Success Criteria</a></li>
-    </ul>
-  </aside>
-
-  <div class="spec-main" markdown="1">
 # Phase 1 Features - Transformation Tracker
 
-<span class="spec-badge">Execution Scope: Phase 1</span>
+<span class="doc-badge">Execution Scope: Phase 1</span>
 
 ## Overview
 
@@ -407,5 +291,3 @@ Phase 1 is successful if users can:
 Primary objective:
 
 > Reliable and simple transformation tracking.
-  </div>
-</div>

@@ -1,0 +1,112 @@
+<style>
+  .idea-nav {
+    border: 1px solid #d8dee4;
+    border-radius: 12px;
+    background: linear-gradient(160deg, #f8fbff 0%, #f5fbf8 100%);
+    padding: 14px;
+  }
+
+  .idea-nav h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .idea-nav .idea-name {
+    margin: 2px 0 10px;
+    color: #57606a;
+    font-size: 0.9rem;
+  }
+
+  .idea-nav .idea-home {
+    display: inline-block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .idea-nav details {
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    margin-top: 8px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .idea-nav summary {
+    cursor: pointer;
+    padding: 10px 12px;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  .idea-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .idea-nav summary::after {
+    content: "+";
+    float: right;
+    color: #57606a;
+  }
+
+  .idea-nav details[open] summary::after {
+    content: "-";
+  }
+
+  .idea-nav ul {
+    margin: 0;
+    padding: 0 12px 10px 30px;
+  }
+
+  .idea-nav li {
+    margin: 6px 0;
+  }
+
+  .idea-nav a {
+    text-decoration: none;
+  }
+
+  .idea-nav a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<nav class="idea-nav">
+  <h3>Idea Navigation</h3>
+  <p class="idea-name">Transformation Tracker</p>
+  <a class="idea-home" href="{{ '/docs/transformation-tracker.md' | relative_url }}">Idea Overview</a>
+
+  <details {% if page.doc_id == 'change-tracker' %}open{% endif %}>
+    <summary>Change Tracker</summary>
+    <ul>
+      <li><a href="{{ '/docs/change-tracker.md#overview' | relative_url }}">Overview</a></li>
+      <li><a href="{{ '/docs/change-tracker.md#problem-statement' | relative_url }}">Problem Statement</a></li>
+      <li><a href="{{ '/docs/change-tracker.md#key-features' | relative_url }}">Key Features</a></li>
+      <li><a href="{{ '/docs/change-tracker.md#mvp-definition' | relative_url }}">MVP Definition</a></li>
+      <li><a href="{{ '/docs/change-tracker.md#vision' | relative_url }}">Vision</a></li>
+    </ul>
+  </details>
+
+  <details {% if page.doc_id == 'ai-roadmap' %}open{% endif %}>
+    <summary>AI Roadmap</summary>
+    <ul>
+      <li><a href="{{ '/docs/ai-roadmap.md#overview' | relative_url }}">Overview</a></li>
+      <li><a href="{{ '/docs/ai-roadmap.md#ai-design-principles' | relative_url }}">Design Principles</a></li>
+      <li><a href="{{ '/docs/ai-roadmap.md#phase-1-ai-launch-version' | relative_url }}">Phase 1 AI</a></li>
+      <li><a href="{{ '/docs/ai-roadmap.md#phase-2-ai-differentiation-phase' | relative_url }}">Phase 2 AI</a></li>
+      <li><a href="{{ '/docs/ai-roadmap.md#phase-3-ai-advanced-features' | relative_url }}">Phase 3 AI</a></li>
+      <li><a href="{{ '/docs/ai-roadmap.md#ai-scope-summary' | relative_url }}">Scope Summary</a></li>
+    </ul>
+  </details>
+
+  <details {% if page.doc_id == 'phase1-features' %}open{% endif %}>
+    <summary>Phase 1 Features</summary>
+    <ul>
+      <li><a href="{{ '/docs/phase1-features.md#overview' | relative_url }}">Overview</a></li>
+      <li><a href="{{ '/docs/phase1-features.md#transformation-categories' | relative_url }}">Categories</a></li>
+      <li><a href="{{ '/docs/phase1-features.md#core-features-non-ai' | relative_url }}">Core Features</a></li>
+      <li><a href="{{ '/docs/phase1-features.md#phase-1-ai-features' | relative_url }}">AI Features</a></li>
+      <li><a href="{{ '/docs/phase1-features.md#phase-1-success-criteria' | relative_url }}">Success Criteria</a></li>
+    </ul>
+  </details>
+</nav>

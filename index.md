@@ -1,62 +1,13 @@
 ---
 layout: default
-title: Product Ideas and Specifications
+title: Idea Land
 ---
 
 <style>
   .page-content .wrapper {
-    max-width: 1400px;
+    max-width: 1460px;
     padding-left: 20px;
     padding-right: 20px;
-  }
-
-  @media (max-width: 640px) {
-    .page-content .wrapper {
-      padding-left: 14px;
-      padding-right: 14px;
-    }
-  }
-
-  .home-layout {
-    display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
-    gap: 28px;
-    align-items: start;
-  }
-
-  .home-sidebar {
-    position: sticky;
-    top: 1.25rem;
-    padding: 14px 16px;
-    border: 1px solid #d8dee4;
-    border-radius: 12px;
-    background: linear-gradient(160deg, #f8fbff 0%, #f5fbf7 100%);
-  }
-
-  .home-sidebar h3 {
-    margin: 0 0 10px;
-    font-size: 0.95rem;
-  }
-
-  .home-sidebar ul {
-    margin: 0;
-    padding-left: 18px;
-  }
-
-  .home-sidebar li {
-    margin: 6px 0;
-  }
-
-  .home-sidebar a {
-    text-decoration: none;
-  }
-
-  .home-sidebar a:hover {
-    text-decoration: underline;
-  }
-
-  .home-main {
-    padding: 4px 2px;
   }
 
   .home-main h1 {
@@ -69,85 +20,70 @@ title: Product Ideas and Specifications
     margin: 8px 0 14px;
     padding: 4px 10px;
     border-radius: 999px;
-    background: #e8f4ec;
-    color: #1f6f43;
+    background: #e8f3ff;
+    color: #0d4f78;
     font-size: 0.82rem;
     font-weight: 600;
   }
 
-  .project-grid {
+  .idea-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
-  .project-card {
+  .idea-card {
     border: 1px solid #d0d7de;
     border-radius: 12px;
-    padding: 14px;
-    background: #ffffff;
+    padding: 16px;
+    background: linear-gradient(160deg, #ffffff 0%, #f8fbff 100%);
   }
 
-  .project-card h3 {
+  .idea-card h3 {
     margin-top: 0;
     margin-bottom: 8px;
   }
 
-  .project-card p {
+  .idea-card p {
     margin-top: 0;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 960px) {
-    .home-layout {
+    .idea-grid {
       grid-template-columns: 1fr;
-      gap: 16px;
     }
+  }
 
-    .home-sidebar {
-      position: static;
-    }
-
-    .project-grid {
-      grid-template-columns: 1fr;
+  @media (max-width: 640px) {
+    .page-content .wrapper {
+      padding-left: 14px;
+      padding-right: 14px;
     }
   }
 </style>
 
-<div class="home-layout">
-  <aside class="home-sidebar">
-    <h3>Quick Navigation</h3>
-    <ul>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </aside>
+<div class="home-main" markdown="1">
+# Idea Land
 
-  <div class="home-main" markdown="1">
-# Product Ideas and Specifications
+<span class="home-badge">Product Idea Repository</span>
 
-<span class="home-badge">Documentation Hub</span>
+## Ideas
 
-## Overview
+Browse ideas and open each one for deep documentation.
 
-This repository contains product ideas, technical planning, and design documents.
-
-## Projects
-
-<div class="project-grid">
-  <div class="project-card">
-    <h3>Change Tracker Specification</h3>
-    <p>Full product specification for the Change Tracker application.</p>
-    <p><a href="docs/change-tracker.md">Open Document</a></p>
+<div class="idea-grid">
+  <div class="idea-card">
+    <h3>Transformation Tracker</h3>
+    <p>Track visible progress in hair, skin, and physique journeys with structured entries and AI-assisted insights.</p>
+    <p><a href="docs/transformation-tracker.md">Open Idea</a></p>
   </div>
 
-  <div class="project-card">
-    <h3>Phase 1 Features</h3>
-    <p>Detailed scope and execution plan for Phase 1 transformation tracking.</p>
-    <p><a href="docs/phase1-features.md">Open Document</a></p>
+  <div class="idea-card">
+    <h3>More Ideas</h3>
+    <p>Use this slot for your next idea. Keep one card per idea and link to its dedicated idea page.</p>
+    <p>Coming soon</p>
   </div>
 </div>
-
-More projects coming soon.
-  </div>
 </div>

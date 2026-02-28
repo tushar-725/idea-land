@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<style>
+  .page-content .wrapper {
+    max-width: 1460px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .idea-layout {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .idea-sidebar {
+    position: sticky;
+    top: 1.25rem;
+  }
+
+  .idea-main {
+    min-width: 0;
+  }
+
+  .idea-main h1 {
+    margin-top: 0;
+    line-height: 1.2;
+  }
+
+  .idea-main blockquote {
+    margin-left: 0;
+    padding: 10px 14px;
+    border-left: 4px solid #1d6f9f;
+    background: #f2f8ff;
+  }
+
+  .idea-main table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .idea-main th,
+  .idea-main td {
+    border: 1px solid #d0d7de;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .idea-main th {
+    background: #f6f8fa;
+  }
+
+  .doc-badge {
+    display: inline-block;
+    margin: 6px 0 14px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #e8f3ff;
+    color: #0d4f78;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 1040px) {
+    .idea-layout {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .idea-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-content .wrapper {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
+</style>
+
+<div class="idea-layout">
+  <aside class="idea-sidebar">
+    {% include transformation-sidebar.html %}
+  </aside>
+
+  <article class="idea-main">
+    {{ content }}
+  </article>
+</div>
